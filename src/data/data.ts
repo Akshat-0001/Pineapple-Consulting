@@ -186,26 +186,31 @@ export const reviews: Review[] = [
   {
     name: "Arvind Singh",
     role: "COO - Kadkraft | India",
+    rating: 5,
     text: "Priya brings clarity, confidence, and sharp communication to every conversation. She stands out instantly whether in an organization or building something of her own.",
   },
   {
     name: "Roy Tibon",
     role: "CEO - Kelev Sagol | Israel",
+    rating: 5,
     text: "Priya's professionalism and communication make complex discussions feel simple and structured. She leaves a strong impression through both her thinking and the way she engages.",
   },
   {
     name: "Ishan Kansal",
     role: "Founder/CEO - Homes & Homies | India",
+    rating: 5,
     text: "Priya has a sharp strategic lens breaking down complex ideas into clear, structured thinking. Her communication is crisp, direct, and never vague.",
   },
   {
     name: "Abhinav Thakur",
     role: "Senior Lead - Pacer Staffing | USA",
+    rating: 5,
     text: "Priya approaches every problem with structure, logic, and strategy at the core. Her communication is a big differentiator- focused, sharp, and always to the point.",
   },
     {
     name: "Akshat Shukla",
     role: "Founder - BuildCore Labs | India",
+    rating: 5,
     text: "Priya is a results-driven professional whose passion and enthusiasm are evident in everything she does. Her clarity of thought and unwavering dedication make her an exceptionally effective business consultant.",
   },
 ];
