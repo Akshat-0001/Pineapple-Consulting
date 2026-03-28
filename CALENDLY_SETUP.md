@@ -6,7 +6,7 @@ Your Calendly booking modal is now fully configured and ready to use!
 
 - **Calendly Link**: https://calendly.com/priyatamang866/discovery-call
 - **WhatsApp**: +91 8794639367
-- **Email**: Priyatamang866@gmail.com
+- **Email**: priya@pineappleconsulting.co.in
 - **LinkedIn**: https://www.linkedin.com/in/priyatamang-consultant
 
 ## Where the Booking Modal Appears

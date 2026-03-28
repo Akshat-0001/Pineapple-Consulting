@@ -94,10 +94,10 @@ const Footer: React.FC<FooterProps> = ({ onBookingClick }) => {
                     <CustomeText title="Contact" className="text-[16px] sm:text-[18px] lg:text-[20px] font-semibold text-[#FD853A]" />
                     <div className="flex flex-col gap-2">
                         <a 
-                            href="mailto:Priyatamang866@gmail.com" 
+                            href="mailto:priya@pineappleconsulting.co.in" 
                             className="text-[#FCFCFD] text-[14px] sm:text-[15px] lg:text-[16px] hover:text-[#FD853A] transition-colors break-words"
                         >
-                            Priyatamang866@gmail.com
+                            priya@pineappleconsulting.co.in
                         </a>
                         <a 
                             href="https://www.linkedin.com/in/priyatamang-consultant" 
