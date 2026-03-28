@@ -4,12 +4,11 @@ import { Menu, X } from 'lucide-react'
 
 const Navbar = () => {
     const menuItems = [
-        { label: "Home" },
-        { label: "About" },
-        { label: "Service" },
-        { label: "Resume" },
-        { label: "Project" },
-        { label: "Contact" },
+        { label: "Home", href: "#home" },
+        { label: "Services", href: "#services" },
+        { label: "Testimonials", href: "#testimonials" },
+        { label: "How I Work", href: "#approach" },
+        { label: "Contact", href: "#contact" },
     ];
     const [selected, setSelected] = useState("Home");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,42 +17,35 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const handleNavClick = (item: { label: string; href: string }) => {
+        setSelected(item.label);
+        setIsMobileMenuOpen(false);
+        
+        // Smooth scroll to section
+        const element = document.querySelector(item.href);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     return (
-        <nav className="relative w-full max-w-[1298px] h-[70px] sm:h-[80px] lg:h-[86px] bg-[#171717] text-white px-10 lg:px-2.5 rounded-[25px] sm:rounded-[35px] lg:rounded-[50px] backdrop-blur-[15px] border border-white mx-auto flex items-center justify-between z-50">
-            {/* Left Menu (Desktop) */}
-            <div className="hidden lg:flex flex-1 justify-start gap-2.5">
-                {menuItems.slice(0, 3).map((item) => (
+        <nav className="relative w-full max-w-[1298px] h-[70px] sm:h-[80px] lg:h-[86px] bg-[#171717] text-white px-6 lg:px-8 rounded-[25px] sm:rounded-[35px] lg:rounded-[50px] backdrop-blur-[15px] border border-white mx-auto flex items-center justify-center z-50">
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex items-center justify-center gap-3">
+                {menuItems.map((item) => (
                     <button
                         key={item.label}
-                        className={`w-[139px] h-[66px] flex items-center justify-center rounded-[60px] text-base font-medium transition duration-300 ${selected === item.label ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
-                        onClick={() => setSelected(item.label)}
+                        className={`px-6 py-3 flex items-center justify-center rounded-[60px] text-base font-medium transition duration-300 whitespace-nowrap ${selected === item.label ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
+                        onClick={() => handleNavClick(item)}
                     >
                         {item.label}
                     </button>
                 ))}
             </div>
 
-            {/* Logo */}
-            <div className="flex flex-col items-center flex-shrink-0 cursor-pointer">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-[#FD853A] rounded-full flex items-center justify-center mb-1">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <text x="4" y="18" fontSize="12" fontWeight="bold" fill="white">JC</text>
-                    </svg>
-                </div>
-                <span className="font-bold text-sm sm:text-base lg:text-lg tracking-wide">JCREA</span>
-            </div>
-
-            {/* Right Menu (Desktop) */}
-            <div className="hidden lg:flex flex-1 justify-end gap-4">
-                {menuItems.slice(3).map((item) => (
-                    <button
-                        key={item.label}
-                        className={`w-[139px] h-[66px] flex items-center justify-center rounded-[60px] text-base font-medium transition duration-300 ${selected === item.label ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
-                        onClick={() => setSelected(item.label)}
-                    >
-                        {item.label}
-                    </button>
-                ))}
+            {/* Mobile: Logo/Brand */}
+            <div className="lg:hidden flex items-center justify-center flex-1">
+                <span className="font-bold text-lg text-[#FD853A]">Pineapple Consulting</span>
             </div>
 
             {/* Mobile Menu Button */}
@@ -72,10 +64,7 @@ const Navbar = () => {
                             <button
                                 key={item.label}
                                 className={`w-full h-[50px] flex items-center justify-center rounded-[25px] text-base font-medium transition duration-300 ${selected === item.label ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
-                                onClick={() => {
-                                    setSelected(item.label);
-                                    setIsMobileMenuOpen(false);
-                                }}
+                                onClick={() => handleNavClick(item)}
                             >
                                 {item.label}
                             </button>

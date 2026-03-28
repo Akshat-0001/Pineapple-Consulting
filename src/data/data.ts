@@ -37,153 +37,207 @@ export interface Review {
 
 export interface CardData {
   title: string;
-  imageSrc: string;
+  description: string;
+  outcomes: string[];
+  icon: string;
 }
+
+export interface ApproachStep {
+  step: string;
+  title: string;
+  description: string;
+}
+
+export const approachSteps: ApproachStep[] = [
+  {
+    step: "01",
+    title: "Fixing comes after understanding.",
+    description: "Because the loud problem is rarely the real one."
+  },
+  {
+    step: "02", 
+    title: "Decide first. Then move.",
+    description: "Most growth issues aren’t about effort : they’re about fuzzy decisions."
+  },
+  {
+    step: "03",
+    title: "Build systems, not hacks.", 
+    description: "If it only works once, it’s not a strategy."
+  },
+  {
+    step: "04",
+    title: "Clarity that actually sticks.",
+    description: "Every project ends with clear choices and “here’s what to do next.”"
+  }
+];
 
 
 
 export const experiences: Experience[] = [
   {
-    company: "Cognizant, Mumbai",
-    duration: "Sep 2016 - July 2020",
-    role: "Experience Designer",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales.",
+    company: "Independent Consulting",
+    duration: "2020 - Present",
+    role: "Business & Growth Consultant",
+    desc: "Working with startups and SMBs to solve real business challenges through strategic planning and execution support.",
     dotColor: "bg-[#FD853A]",
   },
   {
-    company: "Sugee Pvt limited, Mumbai",
-    duration: "Sep 2020 - July 2023",
-    role: "UI/UX Designer",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales.",
+    company: "Strategic Advisory",
+    duration: "2018 - 2020",
+    role: "Market Research Analyst",
+    desc: "Conducted market analysis and competitive research for growing businesses across various industries.",
     dotColor: "bg-[#1D2939]",
   },
   {
-    company: "Cinetstox, Mumbai",
-    duration: "Sep 2023",
-    role: "Lead UX Designer",
-    desc: "",
+    company: "Business Development",
+    duration: "2016 - 2018",
+    role: "Growth Strategy Lead",
+    desc: "Led go-to-market initiatives and helped companies identify new revenue opportunities.",
     dotColor: "bg-[#FD853A]",
   },
 ];
 
 export const buttons: string[] = [
-  "Landing Page",
-  "Product Design",
-  "Animation",
-  "Glassmorphism",
-  "Cards",
+  "Strategy Consulting",
+  "Growth Planning",
+  "Market Analysis",
+  "GTM Strategy",
+  "Execution Support",
 ];
 
 export const iconAndText: IconAndText[] = [
   {
     icon: Star,
-    name: "4.9 Average Rating",
+    name: "Proven Results",
   },
   {
     icon: Award,
-    name: "25+ Winning Awards",
+    name: "Strategic Excellence",
   },
   {
     icon: ShieldCheck,
-    name: "Certified Product Design",
+    name: "Trusted Advisor",
   },
 ];
 
 export const skills: string[] = [
-  "JavaScript",
-  "TypeScript",
-  "Next.js",
-  "React",
-  "Node.js",
-  "Tailwind CSS",
-  "MongoDB",
-  "PostgreSQL",
-  "Express",
+  "Business Strategy",
+  "Growth Planning",
+  "Market Analysis",
+  "Competitive Research",
+  "GTM Strategy",
+  "Strategic Planning",
+  "Business Development",
+  "Execution Support",
 ];
 
 export const blogs: Blog[] = [
   {
     image: "/Rectangle 6.svg",
     button: "Read More",
-    name: "Mahesh Pokale",
-    date: "10 Nov, 2024",
-    title: "Design Unraveled: Behind the Scenes of UI/UX Magic",
+    name: "Business Insights",
+    date: "15 Jan, 2026",
+    title: "5 Strategic Decisions That Transform Growing Businesses",
   },
   {
     image: "/Frame 60.svg",
     button: "Explore",
-    name: "Sarah Johnson",
-    date: "12 Dec, 2024",
-    title: "Mastering Tailwind: Tips for Clean UI Development",
+    name: "Growth Strategy",
+    date: "22 Jan, 2026",
+    title: "How to Build a Go-To-Market Strategy That Actually Works",
   },
   {
     image: "/Rectangle 6 (1).svg",
     button: "Check Now",
-    name: "John Doe",
-    date: "1 Jan, 2025",
-    title: "Modern Web Development in 2025",
+    name: "Market Analysis",
+    date: "28 Jan, 2026",
+    title: "Understanding Your Competition: A Strategic Approach",
   },
 ];
 
 export const portfolioData: PortfolioItem[] = [
   {
     image: "/Frame 26.svg",
-    title: "Lirante 1",
-    href: "/project-1",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
+    title: "SaaS Startup GTM Strategy",
+    href: "/case-study-1",
+    desc: "Helped a B2B SaaS startup refine their go-to-market approach, resulting in 40% faster customer acquisition and clearer market positioning.",
   },
   {
     image: "/Frame 26.svg",
-    title: "Lirante 2",
-    href: "/project-2",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
+    title: "E-commerce Growth Plan",
+    href: "/case-study-2",
+    desc: "Developed comprehensive growth strategy for mid-sized e-commerce business, identifying new revenue streams and optimizing customer targeting.",
   },
   {
     image: "/Frame 26.svg",
-    title: "Lirante 3",
-    href: "/project-3",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
+    title: "Market Entry Strategy",
+    href: "/case-study-3",
+    desc: "Conducted market analysis and competitive research for company expanding into new geographic markets, reducing entry risks and identifying key opportunities.",
   },
   {
     image: "/Frame 26.svg",
-    title: "Lirante 4",
-    href: "/project-4",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
+    title: "Strategic Business Planning",
+    href: "/case-study-4",
+    desc: "Worked with leadership team to structure 3-year growth plan with clear milestones, priorities, and execution framework for sustainable scaling.",
   },
 ];
 
 export const reviews: Review[] = [
   {
-    name: "Mahesh Pokale",
-    role: "Web Designer",
+    name: "Arvind Singh",
+    role: "COO - Kadkraft | India",
     rating: 5,
-    text: "Consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
+    text: "Priya brings clarity, confidence, and sharp communication to every conversation. She stands out instantly whether in an organization or building something of her own.",
   },
   {
-    name: "Sarah Johnson",
-    role: "Product Manager",
-    rating: 4,
-    text: "Excellent work! Very professional and meets deadlines consistently. Highly recommended for design and development projects.",
-  },
-  {
-    name: "John Doe",
-    role: "UI/UX Lead",
+    name: "Roy Tibon",
+    role: "CEO - Kelev Sagol | Israel",
     rating: 5,
-    text: "Top quality design and coding. Strong attention to detail and highly collaborative throughout the project lifecycle.",
+    text: "Priya's professionalism and communication make complex discussions feel simple and structured. She leaves a strong impression through both her thinking and the way she engages.",
   },
   {
-    name: "Aryan Sharma",
-    role: "Software Engineer",
-    rating: 4,
-    text: "Innovative approach, clean design, and prompt delivery. Will work together again for sure!",
+    name: "Ishan Kansal",
+    role: "Founder/CEO - Homes & Homies | India",
+    rating: 5,
+    text: "Priya has a sharp strategic lens breaking down complex ideas into clear, structured thinking. Her communication is crisp, direct, and never vague.",
+  },
+  {
+    name: "Abhinav Thakur",
+    role: "Senior Lead - Pacer Staffing | USA",
+    rating: 5,
+    text: "Priya approaches every problem with structure, logic, and strategy at the core. Her communication is a big differentiator- focused, sharp, and always to the point.",
+  },
+    {
+    name: "Akshat Shukla",
+    role: "Founder - BuildCore Labs | India",
+    rating: 5,
+    text: "Priya is a results-driven professional whose passion and enthusiasm are evident in everything she does. Her clarity of thought and unwavering dedication make her an exceptionally effective business consultant.",
   },
 ];
 
 export const cardData: CardData[] = [
-  { title: "Jewellery Design", imageSrc: "/Rectangle 7.svg" },
-  { title: "Mehndi Expert", imageSrc: "/Rectangle 7.svg" },
-  { title: "Fashion Designer", imageSrc: "/Rectangle 7.svg" },
-  { title: "Craft Expert", imageSrc: "/Rectangle 7.svg" },
-  { title: "Beauty & Imitation", imageSrc: "/Rectangle 7.svg" },
-  { title: "Designer Studio", imageSrc: "/Rectangle 7.svg" },
+  { 
+    title: "Growth Strategy", 
+    description: "Defining where to play, who to focus on, and which growth path is worth committing to.",
+    outcomes: ["Clear market positioning", "Focused target segments", "Validated growth path"],
+    icon: "🎯"
+  },
+  { 
+    title: "GTM & Revenue Strategy", 
+    description: "Structuring how products go to market, price, and convert demand into revenue.",
+    outcomes: ["Go-to-market structure", "Pricing strategy", "Revenue conversion"],
+    icon: "📈"
+  },
+  { 
+    title: "Business Diagnosis / Clarity Sprints", 
+    description: "Short structured engagements to untangle complexity and define the right next moves.",
+    outcomes: ["Untangled complexity", "Clear priorities", "Actionable next steps"],
+    icon: "🔍"
+  },
+  { 
+    title: "Founder & Leadership Advisory", 
+    description: "Decision support for leaders navigating scale, trade-offs, and strategic tension. (Selective)",
+    outcomes: ["Better decisions", "Strategic clarity", "Confident execution"],
+    icon: "⚡"
+  },
 ];

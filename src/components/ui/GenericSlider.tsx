@@ -50,8 +50,8 @@ export function GenericSlider<T extends AllowedCard>({
           <div className="flex gap-4 overflow-x-auto">
             {data.slice(0, 3).map((item, index) => (
               <div key={index} className="flex-shrink-0 w-full max-w-sm">
-                {cardType === 'hover' && 'title' in item && 'imageSrc' in item && (
-                  <ServicesCard title={item.title} imageSrc={item.imageSrc} priority={index === 0} />
+                {cardType === 'hover' && 'title' in item && 'description' in item && 'outcomes' in item && 'icon' in item && (
+                  <ServicesCard title={item.title} description={item.description} outcomes={item.outcomes} icon={item.icon} priority={index === 0} />
                 )}
                 {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && (
                   <PortfolioCard
@@ -130,8 +130,8 @@ export function GenericSlider<T extends AllowedCard>({
               key={index}
               className={`${isReview ? '!w-full sm:!w-[90%] md:!w-[784px]' : '!flex justify-center'}`}
             >
-              {cardType === 'hover' && 'title' in item && 'imageSrc' in item && (
-                <ServicesCard title={item.title} imageSrc={item.imageSrc} priority={index === 0} />
+              {cardType === 'hover' && 'title' in item && 'description' in item && 'outcomes' in item && 'icon' in item && (
+                <ServicesCard title={item.title} description={item.description} outcomes={item.outcomes} icon={item.icon} priority={index === 0} />
               )}
               {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && (
                 <PortfolioCard
