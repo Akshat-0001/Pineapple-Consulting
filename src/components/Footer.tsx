@@ -1,9 +1,7 @@
 "use client"
 import React from "react";
 import { MessageCircle, Linkedin } from "lucide-react";
-import { ArrowUpRight } from "lucide-react";
 import CustomeText from "./ui/CustomeText";
-import ClientOnly from "./ui/ClientOnly";
 
 interface FooterProps {
   onBookingClick?: () => void;
@@ -29,7 +27,7 @@ const Footer: React.FC<FooterProps> = ({ onBookingClick }) => {
             {/* Top Section */}
             <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-4">
                 <h1 className="font-semibold leading-tight text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[64px] text-[#FCFCFD] text-center lg:text-left">
-                    Let's Connect
+                    Let&apos;s Connect
                 </h1>
                 <div className="flex gap-4 sm:gap-5">
                     {socialLinks.map((item, idx) => {
@@ -109,12 +107,13 @@ const Footer: React.FC<FooterProps> = ({ onBookingClick }) => {
                         >
                             LinkedIn Profile
                         </a>
-                        <a 
-                            href="#contact"
-                            className="text-[#FCFCFD] text-[14px] sm:text-[15px] lg:text-[16px] hover:text-[#FD853A] transition-colors cursor-pointer"
+                        <button
+                            type="button"
+                            onClick={() => onBookingClick?.()}
+                            className="text-left text-[#FCFCFD] text-[14px] sm:text-[15px] lg:text-[16px] hover:text-[#FD853A] transition-colors cursor-pointer"
                         >
                             Schedule a Discovery Call
-                        </a>
+                        </button>
                     </div>
                 </div>
 

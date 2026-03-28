@@ -53,7 +53,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
               Book Your Discovery Call
             </h2>
             <p className="text-sm sm:text-base text-[#667085] mt-1">
-              Let's discuss how I can help your business grow
+              Let&apos;s discuss how I can help your business grow
             </p>
           </div>
           <button

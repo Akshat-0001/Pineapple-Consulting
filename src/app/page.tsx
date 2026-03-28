@@ -2,7 +2,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomeText from "@/components/ui/CustomeText";
-import DualToggleButtons from "@/components/ui/DualButtons";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { iconAndText, skills, cardData, reviews, approachSteps } from '../data/data';
@@ -34,7 +33,7 @@ export default function Home() {
 
         <div className="hidden lg:flex flex-col w-[328px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px] relative z-10">
           <p className="text-[#171717] text-[20px] font-bold leading-snug">
-            Less Theory. More "OH, This Works."
+            Less Theory. More &quot;OH, This Works.&quot;
           </p>
         </div>
 
@@ -172,7 +171,7 @@ export default function Home() {
             </div>
           </div>
           <p className="w-full max-w-[742px] text-[14px] sm:text-[16px] lg:text-[20px] text-[#F9FAFB] text-center leading-[1.5] sm:leading-[1.6] px-2">
-            I've worked with growing businesses and startups across different industries, helping them clarify strategy and make smarter growth decisions.
+            I&apos;ve worked with growing businesses and startups across different industries, helping them clarify strategy and make smarter growth decisions.
           </p>
         </div>
 
