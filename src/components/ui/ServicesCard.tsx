@@ -8,7 +8,7 @@ interface HoverCardProps {
   priority?: boolean;
 }
 
-export default function ServicesCard({ title, description, outcomes, icon, priority = false }: HoverCardProps) {
+export default function ServicesCard({ title, description, outcomes }: HoverCardProps) {
   return (
     <div className="relative flex flex-col w-full md:max-w-[360px] lg:max-w-[416px] h-auto min-h-[320px] rounded-[37px] lg:rounded-[40px] bg-white/10 backdrop-blur-[15px] border border-white/50 hover:bg-[#FD853A] transition-all duration-300 ease-in-out overflow-hidden cursor-pointer group p-6">
 
