@@ -110,7 +110,7 @@ export default function Home() {
             <CustomeText title="Actually Do" className="font-medium text-2xl sm:text-3xl lg:text-5xl text-[#FD853A]" />
           </div>
           <p className="w-full lg:w-[578px] font-medium text-sm sm:text-base lg:text-[20px] text-white">
-            I work with founders and leadership teams on the strategic decisions that actually move the business forward.
+            I work with Founders and Leadership teams on the strategic decisions that actually move the business forward.
           </p>
         </div>
 
@@ -212,7 +212,7 @@ export default function Home() {
                 </div>
                 <CustomeText title={step.title} className="font-semibold text-lg sm:text-xl lg:text-2xl text-[#1D2939]" />
               </div>
-              <p className="text-[#667085] text-sm sm:text-base lg:text-lg leading-relaxed w-full ml-[52px] sm:ml-[64px]">
+              <p className="text-[#667085] text-sm sm:text-base lg:text-lg leading-relaxed w-full pl-[52px] sm:pl-[64px] break-words">
                 {step.description}
               </p>
             </div>
