@@ -45,7 +45,6 @@ export default function ReviewCard({ name, role, rating, text }: Review) {
             />
           ))}
         </div>
-        <span className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-[#FCFCFD]">{rating}</span>
       </div>
 
       {/* Review Text */}
